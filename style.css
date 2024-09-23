@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: #ffffff;
+}
+
+/* Container for main content */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #2a2a2a; /* Softer background */
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(193, 188, 188, 0.4);
+    transition: all 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 32px rgba(189, 185, 185, 0.5);
+}
+
+/* Heading styling */
+h1 {
+    color: #e0e0e0;
+    text-align: center;
+    font-weight: 300;
+    font-size: 2.8em;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* Styling for search input and button container */
+.search-container {
+    display: flex;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 12px rgba(181, 177, 177, 0.3);
+    border-radius: 50px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #383838 0%, #4b4b4b 100%);
+    transition: all 0.3s ease;
+}
+
+/* Focus state for the search box */
+.search-container:focus-within {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Styling for the search input */
+#searchInput {
+    flex-grow: 1;
+    padding: 15px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #333333;
+    color: #ffffff;
+    outline: none;
+    border-radius: 50px 0 0 50px;
+    transition: background-color 0.3s ease;
+}
+
+#searchInput:focus {
+    background-color: #444444;
+}
+
+/* Styling for the search button */
+#searchButton {
+    padding: 15px 30px;
+    font-size: 16px;
+    background-color: #3d77d4;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 50px 50px 0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#searchButton:hover {
+    background-color: #2a5ca8;
+    transform: scale(1.05);
+}
+
+/* Styling for the search history container */
+.history-container {
+    background-color: #3a3a3a;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Subheading for the history section */
+.history-container h2 {
+    font-weight: 300;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #e0e0e0;
+    text-align: center;
+}
+
+/* Search history list styling */
+#searchHistory {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Individual history item styling */
+#searchHistory li {
+    padding: 12px 18px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #4a4a4a;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    background-color: #4e5361;
+    color: #cfd2d6;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#searchHistory li:hover {
+    background-color: #3a3a3a;
+    transform: scale(1.03);
+}
+
+/* Styling for the clear history button */
+#clearHistoryButton {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#clearHistoryButton:hover {
+    background-color: #d32f2f;
+    transform: translateY(-2px);
+}
+
+/* Fade-in animation for history items */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#searchHistory li {
+    animation: fadeIn 0.4s ease;
+}
